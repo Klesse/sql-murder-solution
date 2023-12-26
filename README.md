@@ -79,7 +79,7 @@ So, the first step was to check the crime report filtered by this values.
 
 # Conclusion
 
-**Jeremy Bowers** murdered someone in SQL City on 01/15/2018 by the command of **Miranda Priestly**.
+**Jeremy Bowers** murdered someone in SQL City on 01/15/2018 by command of **Miranda Priestly**.
 
 # Author
 
