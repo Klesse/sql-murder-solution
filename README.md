@@ -1,4 +1,4 @@
-# SQL Murder - Walktrough
+# SQL Murder - Walktrhough
 
 ![image](https://github.com/Klesse/sql-murder-solution/assets/62315031/addb4fa9-5d03-48cc-86d5-df87737eb11a)
 
