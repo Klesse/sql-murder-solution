@@ -43,35 +43,36 @@ So, the first step was to check the crime report filtered by this values.
   Observing the output we see that the murderer can be one of this three people. SO I searched for the git fit now member id too.
 
 5. `SELECT * FROM person JOIN get_fit_now_member ON person.id = get_fit_now_member.person_id WHERE get_fit_now_member.id LIKE '48Z%'`
+   
    **Return**: ![image](https://github.com/Klesse/sql-murder-solution/assets/62315031/e3e4be5f-08c6-42b7-885d-3f2717665dd2)
 
    Looking this return and the past, we can infer that the murder can only possible be **Jeremy Bowers**. So i tried to insert his name in the
    solution table.
-
-7. `INSERT INTO solution VALUES (1, 'Jeremy Bowers');`
+6. `INSERT INTO solution VALUES (1, 'Jeremy Bowers');`
    `SELECT value FROM solution;`
    **Return**: ![image](https://github.com/Klesse/sql-murder-solution/assets/62315031/859f083b-e95b-4f72-8261-5fbce1b334bb)
 
    So the murderer is **Jeremy Bowers**!. But, there is someone that have contracted him to do the job.
    The first thing to do is to search for the interview of Jeremy Bowers.
 
-8. `SELECT * FROM person JOIN interview ON person.id = interview.person_id WHERE name='Jeremy Bowers'`
+7. `SELECT * FROM person JOIN interview ON person.id = interview.person_id WHERE name='Jeremy Bowers'`
    **Return**: I was hired by a woman with a lot of money. I don't know her name but I know she's around 5'5" (65") or 5'7" (67").
    She has red hair and she drives a Tesla Model S. I know that she attended the SQL Symphony Concert 3 times in December 2017.
 
    So I focused to find someone's ID that have visited the SQL Symphony Concert 3 times.
 
-9. `SELECT person_id FROM facebook_event_checkin WHERE event_name='SQL Symphony Concert' AND date LIKE '201712%' ORDER BY person_id DESC;`
+8. `SELECT person_id FROM facebook_event_checkin WHERE event_name='SQL Symphony Concert' AND date LIKE '201712%' ORDER BY person_id DESC;`
+    
    **Return**: ![image](https://github.com/Klesse/sql-murder-solution/assets/62315031/91ef8b52-be92-4230-82dd-b965688dccc5)
 
    In the output we can see that only one person was in the concert for three times. So, the last thing to do is to find the person name by this ID (99716).
 
-10. `SELECT name FROM person WHERE id=99716`
+9. `SELECT name FROM person WHERE id=99716`
     **Return**: Miranda Priestly
 
     So, the person who have contracted Jeremy Bowers as **Miranda Priestly**
 
-11. `INSERT INTO solution VALUES (1, 'Miranda Priestly');`
+10. `INSERT INTO solution VALUES (1, 'Miranda Priestly');`
     ` SELECT value FROM solution;`
     **Return**: ![image](https://github.com/Klesse/sql-murder-solution/assets/62315031/37bf65f2-7b3b-4c22-ad18-25ac31d1cb49)
 
